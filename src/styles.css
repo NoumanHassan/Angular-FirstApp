@@ -1,1 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
+a:hover {
+    text-decoration: none;
+}
+.email-table {
+	width: 100%; 
+	border-collapse: collapse; 
+}
+.email-table tr {
+	overflow: hidden;
+}
+.email-table tr th {
+	overflow: hidden;
+	font-size: 15px;
+	line-height: 18px;
+	padding: 10px 10px;
+	color: #fff;
+	background: #35b729;
+	text-align: center;
+}
+.email-table tr td {
+	overflow: hidden;
+	font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+	color: #0e1120;
+	background: #dff0d8;
+	text-align: center;
+	padding: 12px;
+}
+.email-table tr td span {
+	display: inline-block;
+	vertical-align: middle;
+}
+.email-table tr td span.image {
+	margin: 0 0 0 5px;
+}
+.email-table tr td img {
+	display: block;
+}
+.email-table tr:nth-child(even) td {
+	background: #bcd5b4;
+}
+.email-table tr:nth-child(3n) td {
+	background: #93c893;
+}
+.action-list {
+	margin: 0 -1px;
+	letter-spacing: -5px;
+}
+.action-list li {
+	padding: 0 1px;
+	display: inline-block;
+	vertical-align: top;
+	letter-spacing: normal;
+	width: 50%;
+}
+.action-list li button,
+.action-list li a {
+	display: block;
+    background: #eed525;
+    color: #0e1120;
+	padding: 6px 15px;
+	border-radius:0 10px 10px 0;
+    transition:all 0.4s ease;
+    border: none;
+    width: 100%;
+}
+.action-list li:first-child button,
+.action-list li:first-child a {
+	border-radius:10px 0 0 10px;
+}
+.action-list .btn-primary.focus,
+.action-list .btn-primary:focus {
+	box-shadow: none;
+}

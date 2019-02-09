@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -18,4 +18,65 @@
   </li>
 </ul>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+<div class="container">
+  <h3>First Application by Angular</h3>
+  <input type="text" class="form-control" [(ngModel)]="title">
+  <p>{{ title }}</p>
+  <!-- Two way data bindings -->
+  <input type="text" class="form-control" [(ngModel)]="titleName">
+  <p>{{ titleName }}</p>
+
+  <table class="email-table">
+      <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>DOB</th>
+        <th>Age</th>
+        <th>Designation</th>
+        <th >Status</th>
+        <th>Details</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Nouman</td>
+        <td>Hassan</td>
+        <td>16-08-1992</td>
+        <td>26</td>
+        <td>Front End Developer</td>
+        <!-- Styling elements dynamically using ngStyle, nGClass is not working with this -->
+        <td [ngStyle]="{color: getColor()}" [ngClass]="{present: status === 'Present'}">{{getStatus()}}</td>
+        <td>
+          <ul class="action-list list-unstyled">
+            <li><button class="btn btn-primary" [disabled] = "allowEdit">Edit</button></li>
+            <li><button class="btn btn-primary">Delete</button></li>
+          </ul>
+        </td>
+        <!-- <td><time datetime="">2019, Jan 09</time></td>
+        <td>Yes</td>
+        <td>In Progress</td>
+         -->
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Nouman</td>
+        <td>Hassan</td>
+        <td>16-08-1992</td>
+        <td>26</td>
+        <td>Front End Developer</td>
+        <!-- Applying CSS classes dynamically used ngClass -->
+        <td [ngClass]="{present: status === 'Present'}">{{getStatus()}}</td>
+        <td>
+          <ul class="action-list list-unstyled">
+            <li><button class="btn btn-primary" [disabled] = "allowEdit">Edit</button></li>
+            <li><button class="btn btn-primary">Delete</button></li>
+          </ul>
+        </td>
+        <!-- <td><time datetime="">2019, Jan 09</time></td>
+        <td>Yes</td>
+        <td>In Progress</td>
+         -->
+      </tr>
+    </table>
+</div>
